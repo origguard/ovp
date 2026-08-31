@@ -1,0 +1,9 @@
+{
+  "name": "@origguard/attest-op",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Attestation vérifiable d'une opération locale — prouver une propriété sans divulguer la donnée.",
+  "bin": { "ogattest": "bin/ogattest.mjs" },
+  "scripts": { "test": "node test/attest.test.mjs" },
+  "license": "SEE LICENSE IN README.md"
+}

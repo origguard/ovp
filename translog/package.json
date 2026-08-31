@@ -1,0 +1,9 @@
+{
+  "name": "@origguard/translog",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Journal public append-only à arbre de Merkle — réécriture d'historique détectable par quiconque.",
+  "bin": { "oglog": "bin/oglog.mjs" },
+  "scripts": { "test": "node test/translog.test.mjs" },
+  "license": "SEE LICENSE IN README.md"
+}

@@ -1,0 +1,176 @@
+{
+  "note": "Vecteurs de test normatifs OVP-1 — générés depuis l implémentation de référence.",
+  "hash_prefixes": {
+    "leaf": "0x00",
+    "node": "0x01"
+  },
+  "canonical_vectors": [
+    {
+      "name": "key ordering",
+      "input": {
+        "b": 1,
+        "a": 2
+      },
+      "canonical": "{\"a\":2,\"b\":1}",
+      "sha256": "d3626ac30a87e6f7a6428233b3c68299976865fa5508e4267c5415c76af7a772"
+    },
+    {
+      "name": "nested ordering",
+      "input": {
+        "z": {
+          "d": 1,
+          "c": 2
+        },
+        "a": [
+          3,
+          {
+            "y": 1,
+            "x": 2
+          }
+        ]
+      },
+      "canonical": "{\"a\":[3,{\"x\":2,\"y\":1}],\"z\":{\"c\":2,\"d\":1}}",
+      "sha256": "f3507ba5eac3e77786eb415849633ba430546fbd818b66cfded31bdb064491bf"
+    },
+    {
+      "name": "null is preserved",
+      "input": {
+        "a": null,
+        "b": 1
+      },
+      "canonical": "{\"a\":null,\"b\":1}",
+      "sha256": "c0bf82ad036cb0a5a03d6759c1b7b8b1f70a39b32dd96ed3977c7f2831ee3b56"
+    },
+    {
+      "name": "unicode key sorting",
+      "input": {
+        "é": 1,
+        "e": 2,
+        "Z": 3,
+        "a": 4
+      },
+      "canonical": "{\"Z\":3,\"a\":4,\"e\":2,\"é\":1}",
+      "sha256": "e660b19d2b4b58108f8d085963fa41d45d279bf2d7a7fd5b727eb74040aa2266"
+    },
+    {
+      "name": "numbers",
+      "input": {
+        "i": 1,
+        "f": 1.5,
+        "neg": -0.25,
+        "exp": 1e+21,
+        "zero": 0
+      },
+      "canonical": "{\"exp\":1e+21,\"f\":1.5,\"i\":1,\"neg\":-0.25,\"zero\":0}",
+      "sha256": "5b4fb9ef4c782b95486e061604ced28ca8416cedb5ef573014921e52acc3e3f7"
+    },
+    {
+      "name": "string escaping",
+      "input": {
+        "s": "quote\" back\\ tab\t nl\n"
+      },
+      "canonical": "{\"s\":\"quote\\\" back\\\\ tab\\t nl\\n\"}",
+      "sha256": "58be63458bbe0c645294477bd6400afa97b57b5fe87dbb23108fd0180fe91f14"
+    },
+    {
+      "name": "empty containers",
+      "input": {
+        "o": {},
+        "a": []
+      },
+      "canonical": "{\"a\":[],\"o\":{}}",
+      "sha256": "9bee7ebfc94b459dacb8cbc72cb2900e61f0aa42189df18329f84f92568f4f89"
+    }
+  ],
+  "merkle": {
+    "leaf_inputs": [
+      "entry-0",
+      "entry-1",
+      "entry-2",
+      "entry-3",
+      "entry-4",
+      "entry-5",
+      "entry-6",
+      "entry-7"
+    ],
+    "leaf_hashes": [
+      "40766b2033429026f53d54502679a839706b4741f8dcaf3a8bba5f41b5ffe075",
+      "e868811a482c27d50b6d45dde79c465d6adb9b06645100477a90cf3d8518898b",
+      "049d7dcdb56bcfebd313304c9839f196a3d4b6ef3bdc0b08298f93ac8191f0a8",
+      "27479b6ab321d2ee477452f68ba527748e863cafe8fbd1df2bf89d1570d1b697",
+      "194bb5a2d5bd10e5d1aa6fd5d42980b356caf1da623cd9987c4bfa2f81771ed7",
+      "514158527515064c7bbd35b44c9f11addcfc38b439554fc9bb0d8b7c661c3e8f",
+      "0cfda576ff4b29ea33c3afdaeed1bd637eb654b28a04302fcab5fd7db07801cc",
+      "c8d81ba4fdd46c6c3c73c87b209eeaf944cf511327211f1f9a81586cf7d4d5a4"
+    ],
+    "roots": [
+      {
+        "size": 0,
+        "root": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "size": 1,
+        "root": "40766b2033429026f53d54502679a839706b4741f8dcaf3a8bba5f41b5ffe075"
+      },
+      {
+        "size": 2,
+        "root": "2f27a5082c1d42afa488ac350a9fc4390c084f54f71ecdff859e98db8429b479"
+      },
+      {
+        "size": 3,
+        "root": "a64bf26e09128f6fe2fe6f8b2d8c801e166b57c047a7cd9b2b809e7a96a2f1cb"
+      },
+      {
+        "size": 4,
+        "root": "256b9e8825e5d370a4ae005d0901ea291977e2927f5cf8e3e72660dd09519edb"
+      },
+      {
+        "size": 5,
+        "root": "1aa68d3074905a581f84cbbd0f753794904fd80451bc4c13e69d9a53bc59502c"
+      },
+      {
+        "size": 6,
+        "root": "08783a523d260480de2ccf0976d7411ed8adaf06f75d5a5de2254c58f968eca9"
+      },
+      {
+        "size": 7,
+        "root": "9139601cc1ca8ab2a7a0c2c134c04845f2b1ba549a83d6c845cfcda439cc585d"
+      },
+      {
+        "size": 8,
+        "root": "dfcc13b9b0ca932c68de3d59eaaa8fe266a9c8091c0300e8405ebfeb0d0e5832"
+      }
+    ],
+    "inclusion_proof": {
+      "index": 3,
+      "treeSize": 8,
+      "leafHash": "27479b6ab321d2ee477452f68ba527748e863cafe8fbd1df2bf89d1570d1b697",
+      "proof": [
+        "049d7dcdb56bcfebd313304c9839f196a3d4b6ef3bdc0b08298f93ac8191f0a8",
+        "2f27a5082c1d42afa488ac350a9fc4390c084f54f71ecdff859e98db8429b479",
+        "5b6680e3035dba9b8a221ee819e805e1c17b333cd66664e76402ea43d7b64a83"
+      ],
+      "root": "dfcc13b9b0ca932c68de3d59eaaa8fe266a9c8091c0300e8405ebfeb0d0e5832"
+    },
+    "consistency_proof": {
+      "oldSize": 5,
+      "newSize": 8,
+      "oldRoot": "1aa68d3074905a581f84cbbd0f753794904fd80451bc4c13e69d9a53bc59502c",
+      "newRoot": "dfcc13b9b0ca932c68de3d59eaaa8fe266a9c8091c0300e8405ebfeb0d0e5832",
+      "proof": [
+        "194bb5a2d5bd10e5d1aa6fd5d42980b356caf1da623cd9987c4bfa2f81771ed7",
+        "514158527515064c7bbd35b44c9f11addcfc38b439554fc9bb0d8b7c661c3e8f",
+        "d448059354605305bf936aa6a0e4c709321c960e2ba6c921b98b9a165319cbe2",
+        "256b9e8825e5d370a4ae005d0901ea291977e2927f5cf8e3e72660dd09519edb"
+      ]
+    }
+  },
+  "signature_example": {
+    "WARNING": "Cle de DEMONSTRATION uniquement. Elle est publiee volontairement pour que toute implementation puisse reproduire la signature (Ed25519 est deterministe). NE JAMAIS l utiliser pour signer quoi que ce soit de reel.",
+    "algorithm": "Ed25519",
+    "publicKey": "yjMt1kSC5mMfkCAnj04HPaj2zNLQWkWRScWXAPTimRM=",
+    "privateKey": "MC4CAQAwBQYDK2VwBCIEILFoOS87nSr6lfzOXMVtPXsQ4xNmLxYdIVnmEawkmL49",
+    "message": "OVP-1 test vector",
+    "signature": "/s7Iyi4NLL/ol3+NkPgZkGgYZ4NBDMDQ45zs6kQoh3TM7Yo7sVYl3Bx8MaeknLOE+bUM3b6bh8kzJ4o97NROCQ=="
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+*.log
+cles.json
+keys.json
+*-keys.json
+witness-state.json
+cosignature.json
+*.ogatt.json
+!SPEC/test-vectors.json
