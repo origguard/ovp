@@ -1,16 +1,18 @@
-# OVP — Open Verification Protocol
+﻿# OVP — Open Verification Protocol
 
 **Prove a property of a result without disclosing the material that produced it.**
+
+> **OVP is an open protocol. OrigGuard is its first implementation and log operator.**
 
 A third party receives only your output file. They can verify that the stated transformation really happened, that the file hasn't changed, and which software produced it — **without ever seeing your source document.**
 
 | Directory | What it is |
 |---|---|
-| [`SPEC/OVP-1.md`](SPEC/OVP-1.md) | The normative specification. Implementable in any language. |
-| [`SPEC/test-vectors.json`](SPEC/test-vectors.json) | Normative test vectors. An implementation that doesn't reproduce them is not conformant. |
-| [`attest-op/`](attest-op/) | Reference implementation — produce and verify operation attestations. |
-| [`translog/`](translog/) | Append-only Merkle log (RFC 6962). Rewriting history is detectable by anyone. |
-| [`witness/`](witness/) | Single-file, zero-dependency witness. Co-signs a log — and **refuses** when the history was rewritten. |
+| [SPEC/OVP-1.md](SPEC/OVP-1.md) | The normative specification. Implementable in any language. |
+| [SPEC/test-vectors.json](SPEC/test-vectors.json) | Normative test vectors. An implementation that doesn't reproduce them is not conformant. |
+| [ttest-op/](attest-op/) | Reference implementation — produce and verify operation attestations. |
+| [	ranslog/](translog/) | Append-only Merkle log (RFC 6962). Rewriting history is detectable by anyone. |
+| [witness/](witness/) | Single-file, zero-dependency witness. Co-signs a log — and **refuses** when the history was rewritten. |
 
 ## The idea in one paragraph
 
@@ -36,14 +38,16 @@ Draft, v1.0. Two independent implementations have already produced byte-identica
 
 ## Tests
 
-```bash
+`ash
 cd attest-op && npm test     # 22 checks
 cd translog  && npm test     # 17 checks, plus 1,122 exhaustive Merkle proofs
-```
+`
 
 ## Related
 
-- [`local-guard`](https://github.com/codexguard-security/local-guard) — Verify that a built web artifact cannot exfiltrate user data.
+- [local-guard](https://github.com/origguard/local-guard) — Verify that a built web artifact cannot exfiltrate user data.
+- [localsync](https://github.com/origguard/localsync) — Zero-server multi-device synchronization engine.
+- [OrigGuard Verification Portal](https://app.origguard.com/verify) — Production web verifier.
 
 ## License
 
