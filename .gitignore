@@ -1,9 +1,6 @@
-node_modules/
+﻿node_modules/
+.DS_Store
 *.log
-cles.json
-keys.json
-*-keys.json
-witness-state.json
-cosignature.json
-*.ogatt.json
-!SPEC/test-vectors.json
+.env
+.env.local
+coverage/
